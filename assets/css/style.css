@@ -1,0 +1,285 @@
+/* Base Styling: Resets & Strict Overrides */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #272c35; /* Grayish background */
+  color: #ffffff;
+  line-height: 1.6;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  background-color: #272c35;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 40px 20px;
+}
+
+.sidebar-middle {
+  text-align: center;
+}
+
+.sidebar-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+}
+
+/* Navigation styling */
+.sidebar-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin: 15px 0;
+}
+
+.nav-link {
+  display: block;
+  color: #8c919a;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Active state for navigation */
+.nav-link.active {
+  background-color: #ffffff;
+  color: #228B22; /* Forest green color */
+  font-weight: 700;
+}
+
+/* Social icons */
+.sidebar-social {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social-icon {
+  width: 30px;
+  height: auto;
+  margin: 0 10px;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+  opacity: 1;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('../images/background.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 44, 53, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+/* Common Section Styling */
+section {
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  background-color: #272c35;
+  border-radius: 6px;
+}
+
+section h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Education styling */
+.edu-entry {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.edu-icon.uchicago {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-top: 5px;
+}
+
+.edu-icon-container {
+    width: 130px;  /* Set fixed width to match your layout preference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edu-icon.hamilton {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin-top: 5px;
+}
+
+.edu-icon.edinburgh {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    margin-top: 5px;
+}
+
+.edu-details h3 {
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+/* Projects/Papers style */
+.project,
+.paper {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #3c4450;
+  padding-bottom: 20px;
+}
+
+.project h3,
+.paper h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.date {
+  color: #8c919a;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.project-links a,
+.paper a {
+  color: #a5d6ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project-links a:hover,
+.paper a:hover {
+  color: #ffffff;
+}
+
+/* Resume & Contact Links */
+#resume a,
+#contact a {
+  color: #a5d6ff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#resume a:hover,
+#contact a:hover {
+  color: #ffffff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar-title {
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .edu-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
