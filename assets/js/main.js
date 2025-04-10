@@ -1,7 +1,43 @@
-// Smooth scrolling & dynamic sidebar highlighting
-
+// Main JS functionality for the site
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".nav-link");
+    const mobileMenuButton = document.querySelector(".mobile-menu-button");
+    const mobileCloseButton = document.querySelector(".mobile-close-button");
+    const sidebar = document.querySelector(".sidebar");
+    const mobileOverlay = document.querySelector(".mobile-overlay");
+    const body = document.body;
+  
+    // Check if the device is iOS
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  
+    // Function to toggle the mobile menu
+    function toggleMobileMenu() {
+      sidebar.classList.toggle("show");
+      mobileOverlay.style.display = sidebar.classList.contains("show") ? "block" : "none";
+      
+      // Prevent scrolling when sidebar is open on iOS
+      if (isIOS) {
+        if (sidebar.classList.contains("show")) {
+          body.classList.add("sidebar-open");
+        } else {
+          body.classList.remove("sidebar-open");
+        }
+      }
+    }
+  
+    // Mobile menu toggle events
+    mobileMenuButton.addEventListener("click", toggleMobileMenu);
+    mobileCloseButton.addEventListener("click", toggleMobileMenu);
+    mobileOverlay.addEventListener("click", toggleMobileMenu);
+  
+    // Close mobile menu when a link is clicked
+    navLinks.forEach(link => {
+      link.addEventListener("click", function() {
+        if (window.innerWidth <= 767 && sidebar.classList.contains("show")) {
+          toggleMobileMenu();
+        }
+      });
+    });
   
     // Smooth scrolling on click
     navLinks.forEach(link => {
@@ -34,5 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
           link.classList.add("active");
         }
       });
+    });
+  
+    // Resize event handler to ensure proper display on orientation change
+    window.addEventListener("resize", function() {
+      if (window.innerWidth > 767) {
+        sidebar.classList.remove("show");
+        mobileOverlay.style.display = "none";
+        body.classList.remove("sidebar-open");
+      }
     });
   });

@@ -1,10 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aben Carrington | Data Science & Quantitative Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Personal portfolio of Aben Carrington, a Data Scientist and Quantitative Analyst specializing in data science, machine learning, and financial mathematics." />
+    <meta name="keywords" content="Aben Carrington, data science, quantitative analyst, financial mathematics, machine learning, portfolio" />
+    <meta name="author" content="Aben Carrington" />
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Aben Carrington | Data Science Portfolio" />
+    <meta property="og:description" content="Data Scientist & Quantitative Analyst specializing in financial mathematics and machine learning." />
+    <meta property="og:image" content="assets/images/og-image.jpg" />
+    <meta property="og:url" content="https://abencarrington.github.io" />
+    <meta property="og:type" content="website" />
+    
     <!-- Google Font: Lato -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
@@ -12,11 +32,21 @@
     />
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
   <body>
+    <!-- Mobile Menu Button (hamburger) -->
+    <div class="mobile-menu-button">
+      <i class="fas fa-bars"></i>
+    </div>
+    
     <!-- Sidebar -->
     <div class="sidebar">
       <div class="sidebar-content">
+        <div class="mobile-close-button">
+          <i class="fas fa-times"></i>
+        </div>
         <div class="sidebar-middle">
           <h2 class="sidebar-title">Aben Carrington</h2>
           <nav>
@@ -208,6 +238,9 @@
         </p>
       </section>
     </div>
+
+    <!-- Overlay for Mobile Menu -->
+    <div class="mobile-overlay"></div>
 
     <!-- Main JavaScript -->
     <script src="assets/js/main.js"></script>
