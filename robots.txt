@@ -1,3 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /assets/css/
+Disallow: /assets/js/
+Allow: /assets/images/
+Allow: /assets/pdf/
+
 Sitemap: https://abencarrington.github.io/sitemap.xml
+
+# Prevent media crawlers
+User-agent: Twitterbot
+Allow: /assets/images/
+
+User-agent: Facebookexternalhit
+Allow: /assets/images/

@@ -6,4 +6,40 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://abencarrington.github.io/#about</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://abencarrington.github.io/#education</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://abencarrington.github.io/#projects</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://abencarrington.github.io/#papers</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://abencarrington.github.io/#resume</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://abencarrington.github.io/#contact</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

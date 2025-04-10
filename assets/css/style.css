@@ -14,6 +14,24 @@ body {
   color: #ffffff;
   line-height: 1.6;
   width: 100%;
+  -webkit-text-size-adjust: 100%; /* Prevent iOS text size adjust after orientation change */
+  text-size-adjust: 100%;
+}
+
+/* Ensure proper text wrapping and spacing on all devices */
+p, h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Fix for iOS text spacing issues */
+p {
+  text-align: left; /* Change from justify to left for better iOS rendering */
+  max-width: 100%;
+  word-break: normal;
 }
 
 /* Sidebar */
@@ -80,12 +98,14 @@ body {
 .sidebar-social {
   text-align: center;
   margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* This creates space between icons without bullets */
 }
 
 .social-icon {
   width: 30px;
   height: auto;
-  margin: 0 10px;
   opacity: 0.9;
   transition: opacity 0.3s;
 }
@@ -145,6 +165,7 @@ body {
 .hero-content p {
   font-size: 1.2rem;
   color: #ffffff;
+  text-align: center; /* Center align this specific text */
 }
 
 /* Common Section Styling */
@@ -166,7 +187,6 @@ section p {
   color: #ffffff;
   font-size: 1.1rem;
   margin-bottom: 15px;
-  text-align: justify;
 }
 
 /* Education styling */
@@ -361,6 +381,12 @@ section p {
   .edu-details {
     width: 100%;
   }
+  
+  /* Ensure text is properly spaced on mobile */
+  p, h3 {
+    letter-spacing: normal;
+    word-spacing: normal;
+  }
 }
 
 /* iPhone Safari Specific Fixes */
@@ -391,5 +417,13 @@ section p {
   /* Prevent scrolling when sidebar is open */
   body.sidebar-open {
     overflow: hidden;
+  }
+  
+  /* Fix text rendering on iOS */
+  p {
+    -webkit-text-size-adjust: 100%;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    text-rendering: optimizeLegibility;
   }
 }
